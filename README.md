@@ -41,7 +41,7 @@ python3 lg_cast.py info 192.168.1.100
 python3 lg_cast.py cast 192.168.1.100 dQw4w9WgXcQ
 
 # Cast a playlist
-python3 lg_cast.py playlist 192.168.1.100 PLlxEHxAkrP8fDBo-bi4UpbB2tNXU_Z6uH
+python3 lg_cast.py playlist 192.168.1.100 PLrAXtmErZgOeiKm4sgNOknGvNjby9efdf
 
 # Set volume (0-100)
 python3 lg_cast.py volume 192.168.1.100 50
