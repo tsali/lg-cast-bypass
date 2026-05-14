@@ -57,7 +57,7 @@ python3 lg_cast.py rickroll 192.168.1.100
 
 ## How It Was Discovered
 
-While attempting to remotely manage TVs at a dance studio 700 miles away through an OpenVPN tunnel:
+While attempting to remotely manage TVs at a dance studio 900 miles away through an OpenVPN tunnel:
 
 1. The webOS WebSocket API (port 3001) returned `ms.channel.unauthorized` and was supposed to show an on-screen pairing prompt — but no prompt appeared on the TV
 2. A full port scan revealed ports 8008 and 8009 (Google Cast) were also open
