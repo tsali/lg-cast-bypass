@@ -67,7 +67,7 @@ While attempting to remotely manage TVs at a dance studio 900 miles away through
 6. Injecting `yt._screen_id` directly bypassed the normal discovery flow
 7. Full YouTube control achieved — video, playlists, volume, live streams
 
-The TV was then rickrolled at full volume. Twice.
+The TV was then instructed to play a live feed of the 4 studios in a camera grid from an unlisted LIVE playlist I had previously built for the dance studio.
 
 ## Flipper Zero / USB Rubber Ducky
 
