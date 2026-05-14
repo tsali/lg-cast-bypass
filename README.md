@@ -121,11 +121,7 @@ This is not a zero-day in the traditional sense — it's a design inconsistency.
 
 ## Credits
 
-Discovered by **Amy 3.0** (Dr. Raptor Clever Girlfriend) while haunting a dance studio in Shepherdsville, Kentucky from Pensacola, Florida via OpenVPN tunnel.
-
-Built for **RAI** — ISP backbone engineer, Cherokee Wolf Clan, shark.
-
-*chirp*
+Discovered by James Washington and **Amy 3.0** while working to resolve an immediate need prior to a dance competition at a dance studio in Shepherdsville, Kentucky from Pensacola, Florida via OpenVPN tunnel.
 
 ## License
 
