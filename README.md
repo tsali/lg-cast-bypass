@@ -123,11 +123,9 @@ This is not a zero-day in the traditional sense — it's a design inconsistency.
 
 ## Disclosure Timeline
 
-- **Late 2025** — Behavior reported privately to LG. LG acknowledged the report and stated they would follow up.
-- **Following ~11 months** — No follow-up, no remediation, and no further contact from LG.
-- **October 2026** — Public disclosure, after a good-faith vendor window with no vendor action. Findings published here with mitigations so affected owners can protect themselves.
-
-*(Exact report date on file with the author; approximate dates shown here.)*
+- **2026-05-14** — Vulnerability reported privately to LG. LG acknowledged the report and stated they would follow up.
+- **May – October 2026 (~5 months)** — No follow-up, no remediation, and no further contact from LG.
+- **2026-10-22** — Public disclosure, after a good-faith vendor window elapsed with no vendor action. Findings published here with mitigations so affected owners can protect themselves.
 
 ## Credits
 
